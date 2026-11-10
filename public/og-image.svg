@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="g1" cx="0.75" cy="0.2" r="0.8"><stop offset="0" stop-color="#7c3aed" stop-opacity="0.55"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
+    <radialGradient id="g2" cx="0.1" cy="1" r="0.7"><stop offset="0" stop-color="#d946ef" stop-opacity="0.35"/><stop offset="1" stop-color="#d946ef" stop-opacity="0"/></radialGradient>
+    <linearGradient id="t" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a78bfa"/><stop offset="0.6" stop-color="#d946ef"/><stop offset="1" stop-color="#f472b6"/></linearGradient>
+    <linearGradient id="gh" x1="4" y1="3" x2="28" y2="28" gradientUnits="userSpaceOnUse"><stop stop-color="#8B5CF6"/><stop offset="1" stop-color="#E879F9"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0A0A0F"/>
+  <rect width="1200" height="630" fill="url(#g1)"/>
+  <rect width="1200" height="630" fill="url(#g2)"/>
+  <g transform="translate(80 90) scale(3)">
+    <path fill="url(#gh)" d="M16 4c-5.2 0-8.8 3.9-8.8 8.9v13.1l3.2-2.7 2.9 2.7 2.7-2.7 2.7 2.7 2.9-2.7 3.2 2.7V12.9C24.8 7.9 21.2 4 16 4Z"/>
+    <circle cx="12.7" cy="12.9" r="1.7" fill="#0A0A0F"/><circle cx="19.3" cy="12.9" r="1.7" fill="#0A0A0F"/>
+  </g>
+  <text x="190" y="165" font-family="Helvetica, Arial, sans-serif" font-size="56" font-weight="700" fill="#f4f3f8">Casper</text>
+  <text x="80" y="360" font-family="Helvetica, Arial, sans-serif" font-size="120" font-weight="700" fill="url(#t)">From prompt</text>
+  <text x="80" y="480" font-family="Helvetica, Arial, sans-serif" font-size="120" font-weight="700" fill="url(#t)">to post.</text>
+  <text x="80" y="560" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#a09eb3">AI microdramas, produced and published on autopilot.</text>
+  <rect x="900" y="110" width="200" height="400" rx="34" fill="#12121b" stroke="#3b3b52" stroke-width="3"/>
+  <rect x="912" y="122" width="176" height="376" rx="26" fill="#1d1240"/>
+  <rect x="926" y="380" width="148" height="40" rx="14" fill="#000" fill-opacity="0.55" stroke="#fff" stroke-opacity="0.25"/>
+  <rect x="926" y="430" width="148" height="40" rx="14" fill="#000" fill-opacity="0.55" stroke="#fff" stroke-opacity="0.25"/>
+  <circle cx="948" cy="400" r="12" fill="#a855f7"/><circle cx="948" cy="450" r="12" fill="#d946ef"/>
+</svg>
