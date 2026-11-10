@@ -16,7 +16,7 @@ Open http://localhost:5173/project-casper-website/
 ## Edit content
 
 - `src/config.ts`: brand name (`BRAND_NAME`), tagline, contact email, site URL. Rename the product here.
-- `src/content.ts`: every piece of copy. Search for `TODO` and `[brackets]` to find placeholders (team, legal pages, contact person).
+- `src/content.ts`: every piece of copy. Search for `TODO` and `[brackets]` to find placeholders (legal pages, contact email).
 - `public/og-image.png`: social preview image. Source: `public/og-image.svg`. Regenerate it after a rename.
 
 ## Deploy to GitHub Pages

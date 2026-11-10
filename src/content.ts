@@ -22,7 +22,6 @@ export const nav = {
     { label: "How it works", to: "/", hash: "how-it-works" },
     { label: "Formats", to: "/", hash: "formats" },
     { label: "Roadmap", to: "/", hash: "roadmap" },
-    { label: "Team", to: "/", hash: "team" },
   ] satisfies NavLink[],
   cta: { label: "Join the pilot", to: "/", hash: "join" } satisfies NavLink,
   menuOpen: "Open menu",
@@ -150,64 +149,6 @@ export const pipeline = {
         "Posts go to four platforms. Performance data is collected and written back to improve the next script.",
     },
   ] satisfies PipelineStep[],
-};
-
-/* ------------------------------------------------------------------ */
-/* Demo simulator                                                      */
-/* ------------------------------------------------------------------ */
-
-export const demo = {
-  id: "demo",
-  eyebrow: "Interactive demo",
-  badge: "Simulated demo",
-  title: "Try the pipeline.",
-  intro: "Type a premise and watch the six stages run. Everything below is mock data in your browser.",
-  inputLabel: "Story premise",
-  placeholder: "A night flight. A passenger who should not exist.",
-  formatLabel: "Format",
-  formats: [
-    { value: "choice", label: "Choice Horror" },
-    { value: "cliffhanger", label: "Cliffhanger Drama" },
-  ],
-  submit: "Generate episode",
-  running: "Running pipeline",
-  reset: "Try another premise",
-  disclaimer: "Demo simulation, real pipeline in development",
-  stages: [
-    { label: "Prompt and Format" },
-    { label: "Script and Choice Tree" },
-    { label: "Visuals" },
-    { label: "Voice and Captions" },
-    { label: "Edit and Render" },
-    { label: "Publish and Learn" },
-  ],
-  storyboard: {
-    heading: "Storyboard, episode 1",
-    mockLabel: "Mock output",
-    runtime: "Runtime 0:48",
-    title: "The Passenger in 14C",
-    logline: "A red eye flight. A seat that should be empty. A voice that knows your name.",
-    frames: [
-      { time: "0:00", tag: "Hook", caption: "Row 14 was empty at takeoff." },
-      { time: "0:12", tag: "Build", caption: "Then the call light came on." },
-      { time: "0:28", tag: "Turn", caption: "The seat belt was fastened." },
-      { time: "0:44", tag: "Choice", caption: "Someone whispers your name." },
-    ],
-    choice: {
-      heading: "Choice overlay at 0:44",
-      prompt: "What do you do?",
-      a: "Check the seat",
-      b: "Wake the crew",
-      note: "Viewers vote in the comments. The winning path plays next. The other path returns later with a “Let's rewind” twist.",
-    },
-    cliffhanger: {
-      heading: "Cliffhanger at 0:46",
-      line: "The seat belt light turns on. Row 14 is not empty anymore.",
-      note: "Hook inside 2 seconds. The episode ends on an open question, so viewers come back for episode 2.",
-    },
-    publishLabel: "Ready to publish to",
-    reviewNote: "MVP includes a human review step before publishing.",
-  },
 };
 
 /* ------------------------------------------------------------------ */
@@ -368,35 +309,6 @@ export const roadmap = {
       target: "Q4 2027",
       title: "Self serve and white label",
       body: "A self serve platform for creators and a white label offer for media partners.",
-    },
-  ],
-};
-
-/* ------------------------------------------------------------------ */
-/* Team                                                                */
-/* ------------------------------------------------------------------ */
-
-export const team = {
-  id: "team",
-  eyebrow: "Team",
-  title: "The people behind it.",
-  // TODO: Replace the placeholder names, roles and bios below with real team details.
-  // Only add credentials that can be verified. Do not invent backgrounds.
-  members: [
-    {
-      name: "[Founder name]",
-      role: "Founder and Product",
-      bio: "[Short bio. Add background, focus and why this problem matters to you.]",
-    },
-    {
-      name: "[Engineering lead name]",
-      role: "Engineering",
-      bio: "[Short bio. Add background in cloud, media pipelines or applied AI.]",
-    },
-    {
-      name: "[Go to market lead name]",
-      role: "Go to Market",
-      bio: "[Short bio. Add background in creator, media or brand partnerships.]",
     },
   ],
 };
