@@ -14,9 +14,6 @@ export function Footer() {
             <Wordmark />
           </Link>
           <p className="text-[15px] leading-relaxed text-muted-foreground">{footer.blurb}</p>
-          <span className="inline-flex items-center rounded-full border border-white/15 bg-white/[0.03] px-3 py-1 text-xs font-semibold tracking-wide text-foreground">
-            {footer.badge}
-          </span>
         </div>
 
         <div className="grid grid-cols-2 gap-10 sm:gap-16">
@@ -45,7 +42,6 @@ export function Footer() {
       </Container>
       <Container className="mt-12 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs leading-relaxed text-muted-foreground">
         <p>{footer.rights}</p>
-        <p>{footer.trademark}</p>
       </Container>
     </footer>
   );

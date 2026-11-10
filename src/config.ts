@@ -6,7 +6,7 @@
 export const BRAND_NAME = "Casper"; // Working name.
 export const TAGLINE = "From prompt to post. AI microdramas, produced and published on autopilot.";
 export const DESCRIPTION =
-  "AI production pipeline for short form vertical microdramas. Write, render and publish to Instagram Reels, TikTok, YouTube Shorts and Snapchat on AWS.";
+  "AI production pipeline for short form vertical microdramas. Write, render and publish to Instagram Reels, TikTok, YouTube Shorts and Snapchat.";
 
 // TODO: Replace with the real contact address.
 export const CONTACT_EMAIL = "hello@example.com";

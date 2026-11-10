@@ -6,7 +6,6 @@ import { Footer } from "@/components/Footer";
 import { ScrollManager } from "@/components/ScrollManager";
 import HomePage from "@/pages/HomePage";
 
-const AwsPage = lazy(() => import("@/pages/AwsPage"));
 const LegalPage = lazy(() => import("@/pages/LegalPage"));
 
 // Vite injects the configured base path, for example /project-casper-website/ on GitHub Pages.
@@ -29,7 +28,6 @@ export default function App() {
             <Suspense fallback={<div className="min-h-[60vh]" />}>
               <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route path="/aws" element={<AwsPage />} />
                 <Route path="/impressum" element={<LegalPage kind="impressum" />} />
                 <Route path="/datenschutz" element={<LegalPage kind="datenschutz" />} />
                 <Route path="*" element={<Navigate to="/" replace />} />

@@ -1,6 +1,6 @@
 # Casper website
 
-Marketing site for Casper (working name): a single page startup site at `/` plus a technical page at `/aws`.
+Marketing site for Casper (working name): a single page startup site at `/` plus placeholder legal pages.
 
 Stack: React 19, Vite, Tailwind CSS v4, shadcn/ui style components (Radix), Framer Motion, React Router.
 
@@ -27,7 +27,7 @@ Open http://localhost:5173/project-casper-website/
 
 The site is served from `https://<user>.github.io/project-casper-website/`. The base path is set in `vite.config.ts`.
 For a custom domain, build with `VITE_BASE=/` and update `SITE_URL` in `src/config.ts`.
-`404.html` is a copy of `index.html`, so deep links such as `/aws` work on GitHub Pages.
+`404.html` is a copy of `index.html`, so deep links such as `/impressum` work on GitHub Pages.
 
 ## Pilot form and Supabase (optional)
 

@@ -1,8 +1,6 @@
-import { Link } from "react-router-dom";
 import { m } from "framer-motion";
-import { ArrowRight, Clapperboard, Film, GitBranch, Mic, PenLine, Send, type LucideIcon } from "lucide-react";
+import { Clapperboard, Film, GitBranch, Mic, PenLine, Send, type LucideIcon } from "lucide-react";
 import { pipeline, type PipelineStep } from "@/content";
-import { Button } from "./ui/button";
 import { Section, SectionHeader } from "./Section";
 import { Reveal } from "./Reveal";
 
@@ -56,33 +54,12 @@ export function PipelineSteps() {
                 <Reveal delay={0.1 + i * 0.12} className="md:mt-6">
                   <h3 className="font-display text-lg font-semibold leading-snug">{s.title}</h3>
                   <p className="mt-2 text-[14px] leading-relaxed text-muted-foreground">{s.description}</p>
-                  <p className="mb-2 mt-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-muted-foreground/80">
-                    {pipeline.awsLabel}
-                  </p>
-                  <ul className="flex flex-wrap gap-1.5 md:justify-center">
-                    {s.aws.map((a) => (
-                      <li
-                        key={a}
-                        className="rounded-md border border-violet-400/25 bg-violet-500/10 px-2 py-1 text-[11.5px] font-medium leading-tight text-accent-soft"
-                      >
-                        {a}
-                      </li>
-                    ))}
-                  </ul>
                 </Reveal>
               </li>
             );
           })}
         </ol>
       </div>
-
-      <Reveal className="mt-14 flex justify-center">
-        <Button asChild variant="outline">
-          <Link to={pipeline.cta.to}>
-            {pipeline.cta.label} <ArrowRight />
-          </Link>
-        </Button>
-      </Reveal>
     </Section>
   );
 }

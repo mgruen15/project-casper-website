@@ -275,7 +275,6 @@ export function DemoSimulator() {
                           >
                             <div className="h-full rounded-full bg-brand-gradient" style={{ width: `${p * 100}%` }} />
                           </div>
-                          <p className="mt-2 text-xs text-muted-foreground">{s.service}</p>
                         </li>
                       );
                     })}

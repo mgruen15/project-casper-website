@@ -21,7 +21,6 @@ export const nav = {
   links: [
     { label: "How it works", to: "/", hash: "how-it-works" },
     { label: "Formats", to: "/", hash: "formats" },
-    { label: "Built on AWS", to: "/aws" },
     { label: "Roadmap", to: "/", hash: "roadmap" },
     { label: "Team", to: "/", hash: "team" },
   ] satisfies NavLink[],
@@ -104,51 +103,44 @@ export type PipelineStep = {
   icon: "prompt" | "script" | "visuals" | "voice" | "render" | "publish";
   title: string;
   description: string;
-  aws: string[];
 };
 
 export const pipeline = {
   id: "how-it-works",
   eyebrow: "How it works",
   title: "Six steps. One pipeline. Zero studio.",
-  intro: "Each episode moves through the same automated flow. Every stage runs on AWS.",
-  awsLabel: "Runs on",
+  intro: "Each episode moves through the same automated flow, from premise to published post.",
   steps: [
     {
       n: 1,
       icon: "prompt",
       title: "Prompt and Format",
       description: "Type a story premise. Pick Interactive Choice Horror or Classic Cliffhanger Drama.",
-      aws: ["Amazon API Gateway", "AWS Lambda"],
     },
     {
       n: 2,
       icon: "script",
       title: "Script and Choice Tree",
       description: "Large language models write the script, the hook and every A or B branch.",
-      aws: ["Amazon Bedrock"],
     },
     {
       n: 3,
       icon: "visuals",
       title: "Visuals",
       description:
-        "AI keyframes meet scripted 3D scenes rendered in Blender on GPU workers. Characters stay consistent. Cost stays low.",
-      aws: ["Amazon Bedrock", "AWS Batch", "Amazon EC2 GPU"],
+        "AI keyframes meet scripted 3D scenes. Characters stay consistent. Cost stays low.",
     },
     {
       n: 4,
       icon: "voice",
       title: "Voice and Captions",
       description: "Natural voices and word by word captions, timed to the frame.",
-      aws: ["Amazon Polly", "Amazon Transcribe"],
     },
     {
       n: 5,
       icon: "render",
       title: "Edit and Render",
       description: "Clips, voice and captions are cut together and encoded for vertical delivery.",
-      aws: ["AWS Elemental MediaConvert"],
     },
     {
       n: 6,
@@ -156,10 +148,8 @@ export const pipeline = {
       title: "Publish and Learn",
       description:
         "Posts go to four platforms. Performance data is collected and written back to improve the next script.",
-      aws: ["Amazon EventBridge", "Amazon SQS", "Amazon DynamoDB"],
     },
   ] satisfies PipelineStep[],
-  cta: { label: "Read the technical detail", to: "/aws" } satisfies NavLink,
 };
 
 /* ------------------------------------------------------------------ */
@@ -184,12 +174,12 @@ export const demo = {
   reset: "Try another premise",
   disclaimer: "Demo simulation, real pipeline in development",
   stages: [
-    { label: "Prompt and Format", service: "API Gateway, Lambda" },
-    { label: "Script and Choice Tree", service: "Amazon Bedrock" },
-    { label: "Visuals", service: "Bedrock, AWS Batch" },
-    { label: "Voice and Captions", service: "Polly, Transcribe" },
-    { label: "Edit and Render", service: "MediaConvert" },
-    { label: "Publish and Learn", service: "EventBridge, SQS" },
+    { label: "Prompt and Format" },
+    { label: "Script and Choice Tree" },
+    { label: "Visuals" },
+    { label: "Voice and Captions" },
+    { label: "Edit and Render" },
+    { label: "Publish and Learn" },
   ],
   storyboard: {
     heading: "Storyboard, episode 1",
@@ -329,7 +319,7 @@ export const responsible = {
     {
       icon: "shield",
       title: "Content moderation",
-      body: "Amazon Bedrock Guardrails screen prompts and outputs before anything is rendered.",
+      body: "Automated moderation screens prompts and outputs before anything is rendered.",
     },
     {
       icon: "eye",
@@ -358,7 +348,7 @@ export const roadmap = {
     {
       phase: "Phase 1",
       target: "Q1 2027",
-      title: "MVP pipeline on AWS",
+      title: "MVP pipeline",
       body: "End to end pipeline with manual review and semi automatic publishing.",
     },
     {
@@ -452,15 +442,12 @@ export const waitlist = {
 
 export const footer = {
   blurb: "AI microdramas, produced and published on autopilot.",
-  badge: "Built on AWS",
   links: [
-    { label: "Built on AWS", to: "/aws" },
     { label: "Impressum", to: "/impressum" },
     { label: "Datenschutz", to: "/datenschutz" },
   ] satisfies NavLink[],
   contactLabel: "Contact",
   rights: `© ${new Date().getFullYear()} ${BRAND_NAME}. All rights reserved.`,
-  trademark: "AWS and all related service names are trademarks of Amazon.com, Inc. or its affiliates.",
 };
 
 export const legal = {
@@ -490,99 +477,4 @@ export const legal = {
   },
   placeholderNote: "Placeholder page. Final text to be added before launch.",
   back: "Back to home",
-};
-
-/* ------------------------------------------------------------------ */
-/* /aws page                                                           */
-/* ------------------------------------------------------------------ */
-
-export const aws = {
-  metaTitle: `Built on AWS | ${BRAND_NAME}`,
-  metaDescription: `Technical overview of the ${BRAND_NAME} architecture on AWS: Bedrock, Batch, Step Functions, MediaConvert and more.`,
-  eyebrow: "Technical overview",
-  title: "Built on AWS",
-  intro: `${BRAND_NAME} is an event driven media pipeline. A serverless control plane orchestrates generative AI, GPU rendering, voice and encoding services, then publishes and learns from the results. This page gives reviewers a clear picture of the stack.`,
-
-  architecture: {
-    title: "Architecture",
-    intro: "One episode flows from the web app to four social platforms. Analytics return to the start.",
-    scrollHint: "Scroll sideways to see the full diagram.",
-    diagramLabel:
-      "Architecture diagram. Web app on CloudFront and S3 calls an API on API Gateway and Lambda. AWS Step Functions orchestrates parallel workers: Amazon Bedrock, AWS Batch on EC2 GPU instances, Amazon Polly and Transcribe, and AWS Elemental MediaConvert. Output is stored in Amazon S3 with metadata in Amazon DynamoDB. A publish queue on EventBridge and SQS sends episodes to the Instagram, TikTok, YouTube and Snapchat APIs. Analytics flow back into DynamoDB and Amazon Athena for the Performance Loop.",
-    flowTitle: "The flow in words",
-    flow: [
-      "Web app on Amazon CloudFront and Amazon S3.",
-      "API on Amazon API Gateway and AWS Lambda.",
-      "Orchestration with AWS Step Functions.",
-      "Parallel workers: Amazon Bedrock for script, image and video generation plus Guardrails. AWS Batch on EC2 GPU instances for Blender rendering. Amazon Polly and Amazon Transcribe for voice and captions. AWS Elemental MediaConvert for the final render.",
-      "Assets stored in Amazon S3.",
-      "Metadata stored in Amazon DynamoDB.",
-      "Publish queue with Amazon EventBridge and Amazon SQS.",
-      "Platform APIs for Instagram, TikTok, YouTube and Snapchat.",
-      "Analytics written back to Amazon DynamoDB and queried with Amazon Athena for the Performance Loop.",
-    ],
-  },
-
-  credits: {
-    title: "Planned use of AWS credits (USD 5,000)",
-    note: "These shares are planning estimates. Actual usage will vary as we measure real workloads.",
-    columns: { service: "Area", share: "Planned share", amount: "Estimate (USD)" },
-    total: 5000,
-    rows: [
-      { area: "Amazon Bedrock models", share: 40 },
-      { area: "AWS Batch and EC2 GPU rendering", share: 25 },
-      { area: "MediaConvert, S3 and CloudFront", share: 15 },
-      { area: "Polly and Transcribe", share: 10 },
-      { area: "Step Functions, Lambda, DynamoDB, SQS", share: 10 },
-    ],
-    totalLabel: "Total",
-  },
-
-  why: {
-    title: "Why AWS",
-    items: [
-      {
-        icon: "gpu",
-        title: "Elastic GPU rendering",
-        body: "Rendering is bursty. AWS Batch scales GPU workers up for a release and back to zero afterward.",
-      },
-      {
-        icon: "sparkles",
-        title: "Generative AI through one API",
-        body: "Amazon Bedrock gives managed access to text, image and video models, plus Guardrails, behind a single API.",
-      },
-      {
-        icon: "workflow",
-        title: "Orchestration for media pipelines",
-        body: "Step Functions coordinates multi step, parallel jobs with retries, state and a clear audit trail.",
-      },
-      {
-        icon: "globe",
-        title: "EU region for data residency",
-        body: "We run in Europe (Frankfurt) so personal data and assets stay in the EU.",
-      },
-    ],
-  },
-
-  roadmap90: {
-    title: "What we build in the first 90 days",
-    items: [
-      { title: "End to end pipeline for one episode", body: "From prompt to a rendered, reviewed video in S3." },
-      { title: "Blender render workers on Batch", body: "GPU worker images, job queues and scaling rules." },
-      { title: "Choice tree format", body: "Branching scripts with A or B overlays and the rewind path." },
-      { title: "Publish queue", body: "EventBridge and SQS with retries per platform API." },
-      { title: "First analytics dashboard", body: "Retention, comments, shares and completion rate in Athena." },
-    ],
-  },
-
-  contact: {
-    title: "Contact for the AWS Activate team",
-    body: "We are happy to walk through the architecture, share a demo of the pipeline in progress and answer technical questions.",
-    // TODO: Add the real contact person, role and a direct email before submitting to AWS Activate.
-    person: "[Name, role]",
-    emailLabel: "Email",
-    email: CONTACT_EMAIL,
-    cta: "Email us",
-    back: "Back to the main site",
-  },
 };

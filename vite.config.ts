@@ -24,7 +24,7 @@ function casperHtml(): Plugin {
       return html.replace(/%([A-Z_]+)%/g, (match, key: string) => tokens[key] ?? match);
     },
     closeBundle() {
-      // GitHub Pages serves 404.html for unknown paths, so deep links like /aws still load the app.
+      // GitHub Pages serves 404.html for unknown paths, so deep links like /impressum still load the app.
       copyFileSync(resolve(outDir, "index.html"), resolve(outDir, "404.html"));
     },
   };
